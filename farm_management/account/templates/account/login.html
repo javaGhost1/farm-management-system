@@ -1,0 +1,15 @@
+{% include "base.html" %}
+
+{% block title %}Log-In{% endblock title %}Log-In
+
+{% block content %}
+<div>
+    <h1>Log In</h1>
+    <p>Use the following form to log in</p>
+    <form method='post'>
+        {{form.as_p}}
+        {% csrf_token %}
+        <p><input type='submit' value='log in'></p>
+    </form>
+</div>
+{% endblock content %}
